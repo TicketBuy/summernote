@@ -1,5 +1,8 @@
+import { fileURLToPath } from 'url';
+import { dirname, resolve } from 'path';
+const __dirname = dirname(fileURLToPath(import.meta.url));
+
 import { defineConfig } from 'vite';
-import externalGlobals from 'rollup-plugin-external-globals';
 import banner from 'vite-plugin-banner';
 import { readFileSync } from 'fs';
 import vitePostCSSSourceMap from './scripts/vite-plugins/vitePostCSSSourceMap.mjs';
@@ -40,9 +43,6 @@ for (const style of styles) {
     },
 
     plugins: [
-      externalGlobals({
-        jquery: '$',
-      }),
       banner((fileName) => {
         if (fileName.endsWith('.min.js')) return banners['minimal'];
         if (fileName.endsWith('.js')) return banners['default'];
@@ -62,9 +62,9 @@ for (const style of styles) {
       sourcemap: true,
 
       lib: {
-        entry: `/src/styles/${style}/summernote-${style}.js`,
+        entry: resolve(__dirname, `src/styles/${style}/summernote-${style}.js`),
         name: 'summernote',
-        formats: ['iife'],
+        formats: ['es'],
         fileName: (format, entryName) => `${entryName}.js`,
       },
 
@@ -77,9 +77,6 @@ for (const style of styles) {
 
         output: {
           assetFileNames: `summernote-${style}.[ext]`,
-          globals: {
-            jquery: 'jQuery',
-          },
         },
       },
     },
