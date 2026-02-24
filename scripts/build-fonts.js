@@ -11,7 +11,7 @@ const webfontConfig = {
   destTemplate: 'src/styles/summernote/font.scss',
   templateFontName: 'summernote',
   templateClassName: 'note-icon',
-  templateFontPath: './font/',
+  templateFontPath: '/fonts/summernote/',
   fixedWidth: false,
   normalize: true,
 };
