@@ -20,6 +20,9 @@
   "engines": {
     "node": ">=17.0.0"
   },
+  "files": [
+    "dist/"
+  ],
   "scripts": {
     "dev": "vite --config vite.config.dev.js",
     "prebuild": "node ./scripts/build-fonts.js",
@@ -27,9 +30,7 @@
     "buildall": "npm run prebuild && node ./scripts/build-all.js",
     "lint": "eslint src public/plugin public/lang test scripts",
     "test": "vitest run",
-    "test:watch": "vitest",
-    "prepublishOnly": "pinst --disable",
-    "postpublish": "pinst --enable"
+    "test:watch": "vitest"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
