@@ -1,6 +1,6 @@
 // Starsoft Mongolia LLC Temuujin Ariunbold
 
-(function($) {
+export default function($) {
   $.extend(true, $.summernote.lang, {
     'mn-MN': {
       font: {
@@ -154,4 +154,4 @@
       },
     },
   });
-})($);
+}

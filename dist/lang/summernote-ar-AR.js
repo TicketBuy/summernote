@@ -1,4 +1,4 @@
-(function($) {
+export default function($) {
   $.extend(true, $.summernote.lang, {
     'ar-AR': {
       font: {
@@ -153,4 +153,4 @@
       },
     },
   });
-})($);
+}

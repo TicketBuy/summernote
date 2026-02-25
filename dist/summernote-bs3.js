@@ -5,7 +5,7 @@ https://summernote.org
 Copyright 2013- Hackerwins and contributors
 Summernote may be freely distributed under the MIT license.
 
-Date: 2026-02-25T00:53Z
+Date: 2026-02-25T01:18Z
  */
 import $ from "jquery";
 $.summernote = $.summernote || {

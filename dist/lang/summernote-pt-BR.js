@@ -1,4 +1,4 @@
-(function($) {
+export default function($) {
   $.extend(true, $.summernote.lang, {
     'pt-BR': {
       font: {
@@ -154,4 +154,4 @@
       },
     },
   });
-})($);
+}

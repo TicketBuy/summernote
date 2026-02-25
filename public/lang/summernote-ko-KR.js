@@ -1,4 +1,4 @@
-(function($) {
+export default function($) {
   $.extend(true, $.summernote.lang, {
     'ko-KR': {
       font: {
@@ -154,4 +154,4 @@
       },
     },
   });
-})($);
+}

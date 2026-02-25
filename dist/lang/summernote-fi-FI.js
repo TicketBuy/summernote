@@ -1,4 +1,4 @@
-(function($) {
+export default function($) {
   $.extend(true, $.summernote.lang, {
     'fi-FI': {
       font: {
@@ -150,4 +150,4 @@
       },
     },
   });
-})($);
+}

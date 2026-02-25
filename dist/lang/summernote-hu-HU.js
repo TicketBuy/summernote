@@ -1,4 +1,4 @@
-(function($) {
+export default function($) {
   $.extend(true, $.summernote.lang, {
     'hu-HU': {
       font: {
@@ -152,4 +152,4 @@
       },
     },
   });
-})($);
+}

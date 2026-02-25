@@ -10,7 +10,7 @@
 //Baku Azerbaijan
 //Website: https://ramilaliyev.com
 
-(function($) {
+export default function($) {
   $.extend(true, $.summernote.lang, {
     'az-AZ': {
       font: {
@@ -164,4 +164,4 @@
       },
     },
   });
-})($);
+}
